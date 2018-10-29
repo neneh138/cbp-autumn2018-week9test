@@ -15,4 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/homepage', 'HomeController@index')->name('homepage');
+Route::get(' /hero', 'HeroController@create');
+
+Route::get(' /hero/batman', 'HeroController@show');
+Route::get(' /hero', 'HeroController@index');
+
+Route::post(' /hero/store', 'HeroController@store');
+
+
+
+
+
+
 Auth::routes();
